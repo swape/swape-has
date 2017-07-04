@@ -44,3 +44,16 @@ if (!has(testObj, 'level1.level2.levelA.levelB.levelX')) {
 } else {
   console.warn('Failed 2');
 }
+
+// has with value test (3rd option)
+if (has(testObj, 'level1.level2.levelA.levelB.levelC.levelD.life', 42)) {
+  console.info('Passed 3');
+} else {
+  console.warn('Failed 3');
+}
+
+if (has(testObj, 'level1.level2.levelA.levelB.levelC.levelD.life', 43)) {
+  console.info('Failed 4');
+} else {
+  console.warn('Passed 4');
+}
