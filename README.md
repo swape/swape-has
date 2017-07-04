@@ -12,14 +12,14 @@ npm install swape-has
 
 ```javascript
 // require the code like this
-const has = require('swape-has').has;
+const has = require('swape-has');
 
 ```
 
 ### use in node.js
 
 ```javascript
-const has = require('swape-has').has;
+const has = require('swape-has');
 
 let testObj = {
   level1: {
