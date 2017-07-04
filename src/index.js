@@ -1,4 +1,4 @@
-function has(obj, spath) {
+function has(obj, spath, inValue) {
   var spathArr = spath.split('.');
   if (spathArr.length > 0) {
     if (typeof obj[spathArr[0]] !== 'undefined') {
@@ -6,9 +6,13 @@ function has(obj, spath) {
       spathArr.shift(); // pop the first element
       if (typeof newObj[spathArr[0]] !== 'undefined') {
         if (spathArr.length === 1) {
-          return true;
+          if (typeof inValue !== 'undefined') {
+            return (newObj[spathArr[0]] === inValue);
+          } else {
+            return true;
+          }
         } else {
-          return has(newObj, spathArr.join('.'));
+          return has(newObj, spathArr.join('.'), inValue);
         }
       } else {
         return false;
@@ -21,4 +25,7 @@ function has(obj, spath) {
   }
 }
 
-exports.has = has;
+
+module.exports = {
+  has: has
+};
