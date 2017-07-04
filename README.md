@@ -4,7 +4,7 @@ Check if sub branch of an object exists. A cleaner code for checking sub sub sub
 This makes the code cleaner to check for very deep objects.
 
 
-### install
+### install in node.js
 
 ```bash
 npm install swape-has
@@ -16,7 +16,7 @@ const has = require('swape-has').has;
 
 ```
 
-### use
+### use in node.js
 
 ```javascript
 const has = require('swape-has').has;
@@ -63,6 +63,38 @@ if (has(testObj, 'level1.level2.levelA.levelB.levelC.levelD.life', 43)) {
 } else {
   console.warn('Passed 4');
 }
+
+```
+
+## use in browser
+```html
+
+<script src="PATH_TO_THIS_LIB/src/index.min.js"></script>
+<script>
+
+var obj = {
+  level1: {
+    level2: {
+      level3: {
+        myvar: 42
+      }
+    }
+  }
+};
+
+if (has(obj, 'level1.level2.level3.myvar', 42)) {
+  console.log('pass 1');
+}
+
+if (!has(obj, 'level1.level2.level3.X', 42)) {
+  console.log('pass 2');
+}
+
+if (!has(obj, 'level1.level2.level3.myvar', 43)) {
+  console.log('pass 3');
+}
+
+</script>
 
 ```
 

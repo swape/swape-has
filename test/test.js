@@ -1,5 +1,6 @@
 'use strict';
-const has = require('../src/index.min.js').has;
+const has = require('../src/index.min.js');
+
 
 let testObj = {
   level1: {
