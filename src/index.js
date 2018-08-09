@@ -21,7 +21,11 @@
 
     var spathArr = spath.split('.');
     if (spathArr.length === 1 && typeof obj[spath] !== 'undefined') {
-      return true;
+      if (typeof inValue !== 'undefined') {
+        return (inValue === obj[spath]);
+      } else {
+        return true;
+      }
     } else if (spathArr.length > 0) {
       if (typeof obj[spathArr[0]] !== 'undefined') {
         var newObj = obj[spathArr[0]];

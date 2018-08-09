@@ -1,6 +1,6 @@
 {
   "name": "swape-has",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Check if sub branch of an object exists. A cleaner code for checking sub sub sub sub object values.",
   "main": "./src/index.min.js",
   "scripts": {

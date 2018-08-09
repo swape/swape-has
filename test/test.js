@@ -72,3 +72,15 @@ if (!has(testObj, 'zero')) {
 } else {
   console.log('Passed 6');
 }
+
+if (!has(testObj, 'zero', 0)) {
+  console.log('Failed 7');
+} else {
+  console.log('Passed 7');
+}
+
+if (has(testObj, 'zero', '0')) {
+  console.log('Failed 8');
+} else {
+  console.log('Passed 8');
+}
