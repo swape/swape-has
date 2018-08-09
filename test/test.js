@@ -1,8 +1,10 @@
 'use strict';
-const has = require('../src/index.min.js');
+const has = require('../src/index.js');
 
 
 let testObj = {
+  data: ['1', 2, '3', 4],
+  zero: 0,
   level1: {
     level2: {
       levelA: {
@@ -35,26 +37,38 @@ let testObj = {
 
 */
 if (has(testObj, 'level1.level2.levelA.levelB.levelC.levelD.life') && testObj.level1.level2.levelA.levelB.levelC.levelD.life === 42) {
-  console.info('Passed 1');
+  console.log('Passed 1');
 } else {
-  console.warn('Failed 1');
+  console.log('Failed 1');
 }
 
 if (!has(testObj, 'level1.level2.levelA.levelB.levelX')) {
-  console.info('Passed 2');
+  console.log('Passed 2');
 } else {
-  console.warn('Failed 2');
+  console.log('Failed 2');
 }
 
 // has with value test (3rd option)
 if (has(testObj, 'level1.level2.levelA.levelB.levelC.levelD.life', 42)) {
-  console.info('Passed 3');
+  console.log('Passed 3');
 } else {
-  console.warn('Failed 3');
+  console.log('Failed 3');
 }
 
 if (has(testObj, 'level1.level2.levelA.levelB.levelC.levelD.life', 43)) {
-  console.info('Failed 4');
+  console.log('Failed 4');
 } else {
-  console.warn('Passed 4');
+  console.log('Passed 4');
+}
+
+if (!has(testObj, 'data')) {
+  console.log('Failed 5');
+} else {
+  console.log('Passed 5');
+}
+
+if (!has(testObj, 'zero')) {
+  console.log('Failed 6');
+} else {
+  console.log('Passed 6');
 }
