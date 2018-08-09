@@ -22,9 +22,5 @@
     "url": "https://github.com/swape/swape-has/issues"
   },
   "homepage": "https://github.com/swape/swape-has#readme",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-uglifyjs": "^0.6.2"
-  }
+  "devDependencies": {}
 }
