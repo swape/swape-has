@@ -1,6 +1,6 @@
 'use strict';
-const has = require('../src/index.js');
 
+const has = require('../src/index.js');
 
 let testObj = {
   data: ['1', 2, '3', 4],

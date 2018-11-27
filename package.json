@@ -1,7 +1,7 @@
 {
   "name": "swape-has",
-  "version": "0.0.5",
-  "description": "Check if sub branch of an object exists. A cleaner code for checking sub sub sub sub object values.",
+  "version": "0.0.6",
+  "description": "Check if sub branch of an object exists. A cleaner code for checking deep nested object values.",
   "main": "./src/index.min.js",
   "scripts": {
     "test": "node ./test/test.js"
@@ -22,5 +22,9 @@
     "url": "https://github.com/swape/swape-has/issues"
   },
   "homepage": "https://github.com/swape/swape-has#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-uglifyjs": "^0.6.2"
+  }
 }
