@@ -20,7 +20,7 @@ const has = require('swape-has');
 ```javascript
 const has = require('swape-has');
 
-let testObj = {
+const testObj = {
   level1: {
     level2: {
       levelA: {
