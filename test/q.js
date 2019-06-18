@@ -2,7 +2,7 @@
 
 const has = require('../src/index.js');
 
-let testObj = {
+const testObj = {
   data: ['1', 2, '3', 4],
   zero: 0,
   false: true,
