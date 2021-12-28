@@ -1,10 +1,13 @@
 {
   "name": "swape-has",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Check if sub branch of an object exists. A cleaner code for checking deep nested object values.",
-  "main": "./src/index.min.js",
+  "main": "./dist/index.min.js",
   "scripts": {
-    "test": "node ./test/test.js"
+    "build:dev": "babel src -d dist --copy-files",
+    "build:min": "BABEL_ENV=minify babel src -d dist --out-file-extension .min.js",
+    "build": "npm run build:dev && npm run build:min",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,12 @@
   "bugs": {
     "url": "https://github.com/swape/swape-has/issues"
   },
-  "homepage": "https://github.com/swape/swape-has#readme"
+  "homepage": "https://github.com/swape/swape-has#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/preset-env": "^7.16.5",
+    "babel-minify": "^0.5.1",
+    "jest": "^27.4.5",
+    "prettier": "2.5.1"
+  }
 }
